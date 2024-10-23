@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Clinic-Management
+A Seemless communication with Doctor and Receptionist Using MERN Stack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Workflow
 
-## Available Scripts
+### 1. Patient Registration and Token Generation
 
-In the project directory, you can run:
+- The patient visits the receptionist and provides necessary details.
+- The receptionist generates a unique token ID for the patient.
 
-### `npm start`
+### 2. Doctor Consultation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- The doctor accesses the patient's token ID to view previous prescriptions and medical history.
+- After consultation, the doctor provides a new prescription.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. Billing
 
-### `npm test`
+- The receptionist performs billing using the patient's token ID.
+- Billing includes details of the prescribed medication and doctor's consultation.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Usage
 
-### `npm run build`
+### 1. Receptionist Login:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Login to the receptionist panel using the credentials:
+  - Email: `user@gmail.com`
+  - Password: `12345678`
+- Navigate to the patient registration section.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Generate Token:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Register new patients by entering their details.
+- Generate a unique token ID for the patient.
+- Provide patients with the generated token ID for future consultations.
 
-### `npm run eject`
+### 3. Doctor Login:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Access the doctor's panel with the following credentials:
+  - Email: `doctor123@gmail.com`
+  - Password: `12345678`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. Retrieve Patient Information:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Enter the patient's token ID to access their medical history and previous prescriptions.
+- Consult with the patient and provide a new prescription.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 5. Prescription Details:
 
-## Learn More
+- The prescription includes details about prescribed medications, recommended treatments, and any additional notes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 6. Receptionist Billing:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Login to the receptionist panel.
+- Retrieve patient details using the token ID.
+- Review the doctor's prescribed information and patient's medical history.
+- Enter billing details, including the consultation fee and prescribed medications cost.
+- Confirm the billing transaction.
 
-### Code Splitting
+# Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Patient Records**
+   - Maintain comprehensive electronic health records for each patient.
+   - Include information about allergies, previous illnesses, and surgeries.
 
-### Analyzing the Bundle Size
+2. **Multi-User Roles**
+   - Differentiate between roles such as receptionist, and doctor.
+   - Assigned specific permissions and access levels based on roles.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Prescription History**
+   - Maintain a detailed history of prescriptions for each patient.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Addtional Features
+- The Patient can give the phone to retrieve the details so that if the patient came at night then he can visit next day with same token id
+- If the Token id is lost then the patient can provide the phone number to retrive the all details
